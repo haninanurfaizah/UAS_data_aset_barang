@@ -7,9 +7,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 // use FPDF;
-use FPDF as FPDF;
 
-//class BarangController adalah deklarasi sebuah Class (kelas) dalam pemrograman berorientasi objek (OOP) yang bertindak sebagai Controller (Pengendali).
 class BarangController
 {
     private $barang;
