@@ -9,7 +9,6 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 // use FPDF;
-use FPDF as FPDF;
 
 class BarangKeluarController
 {
