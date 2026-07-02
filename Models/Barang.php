@@ -1,5 +1,4 @@
 <?php
-
 //class yang berisi perintah untuk mengambil, menambah, mengubah, dan menghapus data pada database.
 //supaya bisa interaksi dan mengakses database
 require_once __DIR__ . '/../Config/Database.php';
@@ -8,7 +7,7 @@ class Barang extends Database
 {
     public function getData($limit, $offset, $search = "")
     {
-         //interaksi 
+        // interaksi
         $search = $this->conn->real_escape_string($search);
 
         $where = "";
@@ -51,7 +50,6 @@ class Barang extends Database
         $countResult = $this->conn->query($countQuery);
         $total = $countResult->fetch_assoc()['total'];
 
-        //mengembalikan ke controller
         return [
             "data" => $data,
             "total" => $total
@@ -107,7 +105,7 @@ class Barang extends Database
 
     public function create($data, $files)
     {
-        session_start();
+        // session_start();
 
         $kode_barang = $this->conn->real_escape_string($data['kode_barang'] ?? '');
         $nama_barang = $this->conn->real_escape_string($data['nama_barang'] ?? '');
@@ -253,7 +251,7 @@ class Barang extends Database
 
     public function update($data, $files, $id)
     {
-        session_start();
+        // session_start();
 
         $id = (int)$id;
 
@@ -358,7 +356,7 @@ class Barang extends Database
 
     public function delete($id)
     {
-        session_start();
+        // session_start();
 
         $id = (int)$id;
 
